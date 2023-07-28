@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: sans-serif;
+    background: url(/image/music.jpeg) no-repeat center fixed;
+    background-size: cover;
+    width: 100vw;
+}
+
+p{
+    font-size:1.6rem;
+    line-height: 1.5;
+}
+
+
