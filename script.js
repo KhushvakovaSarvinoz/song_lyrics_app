@@ -5,7 +5,7 @@ const result =document.getElementById("result");
 
 const apiURL = "http://api.lyrics.ovh";
 
-//Get input value
+//GET INPUT VALUE
 form.addEventListener("submit", e =>{
     e.preventDefault();
     let searchValue = search.value.trim();
@@ -16,3 +16,11 @@ form.addEventListener("submit", e =>{
         beginSearch(searchValue);
     }
 })
+
+// CREATE SEARCH FUNCTION  
+async function beginSearch(searchValue){
+const searchResult = await fetch('${apiURL}/suggest/${searchValue}');
+const data = await searchResult.json();
+
+displayData(data);
+}
