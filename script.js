@@ -19,8 +19,20 @@ form.addEventListener("submit", e =>{
 
 // CREATE SEARCH FUNCTION  
 async function beginSearch(searchValue){
-const searchResult = await fetch('${apiURL}/suggest/${searchValue}');
+const searchResult = await fetch(`${apiURL}/suggest/${searchValue}`);
 const data = await searchResult.json();
+console.log(data)
+//displayData(data);
+}
 
-displayData(data);
+//DISPLAY SEARCH RESULT
+
+function displayData(data) {
+    result.innerHTML = `
+    <ul class="songs">
+        +
+
+    </ul>
+    
+    `
 }
